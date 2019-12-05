@@ -19,9 +19,9 @@ export const PictureSelector = () => {
   const clickButton = event => {
     changePicture(event.target.value);
   };
-  const displayedPicture = pictureList.filter(item => {
+  const [displayedPicture] = pictureList.filter(item => {
     return item.title === selectedPicture;
-  })[0];
+  });
   return (
     <div>
       <PictureDisplay displayedPicture={displayedPicture} />

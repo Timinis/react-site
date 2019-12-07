@@ -1,16 +1,13 @@
-import React from 'react';
-import { Title } from './Title';
-import { Counter } from './Counter';
-import { Form } from './Form';
-import { PictureSelector } from './PictureSelector';
+import React, { useState } from 'react';
+import { Page } from './Page';
+import { Navbar } from './Navbar';
 
 function App() {
+  const [currentPage, pageController] = useState('home');
   return (
     <div>
-      <Title />
-      <Counter />
-      <Form />
-      <PictureSelector />
+      <Navbar pageController={pageController} />
+      <Page currentPage={currentPage} />
     </div>
   );
 }

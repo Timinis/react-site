@@ -22,6 +22,7 @@ export const PictureSelector = () => {
   const [displayedPicture] = pictureList.filter(item => {
     return item.title === selectedPicture;
   });
+
   return (
     <div>
       <PictureDisplay displayedPicture={displayedPicture} />

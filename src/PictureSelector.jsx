@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Page } from './Navbar';
 
 export const PictureSelector = () => {
   const pictureList = [
@@ -24,7 +25,7 @@ export const PictureSelector = () => {
   });
 
   return (
-    <div>
+    <Page>
       <PictureDisplay displayedPicture={displayedPicture} />
       {pictureList.map(item => {
         return (
@@ -33,7 +34,7 @@ export const PictureSelector = () => {
           </button>
         );
       })}
-    </div>
+    </Page>
   );
 };
 

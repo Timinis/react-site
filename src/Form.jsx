@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Page } from './Navbar';
 
 export const Form = () => {
   const [input, changeInput] = useState('');
@@ -6,7 +7,7 @@ export const Form = () => {
   const inputRef = React.createRef();
 
   return (
-    <div>
+    <Page>
       <p>{display}</p>
       <input
         onChange={event => {
@@ -22,6 +23,6 @@ export const Form = () => {
       >
         Submit
       </button>
-    </div>
+    </Page>
   );
 };

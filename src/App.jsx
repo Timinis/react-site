@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { Page } from './Page';
-import { Navbar } from './Navbar';
+import React from 'react';
+import { HashRouter, Route } from 'react-router-dom';
+import { Title } from './Title';
+import { Counter } from './Counter';
+import { Form } from './Form';
+import { PictureSelector } from './PictureSelector';
 
 function App() {
-  const [currentPage, pageController] = useState('home');
   return (
-    <div>
-      <Navbar pageController={pageController} />
-      <Page currentPage={currentPage} />
-    </div>
+    <HashRouter>
+      <Route exact path="/" component={Title} />
+      <Route exact path="/counter" component={Counter} />
+      <Route exact path="/form" component={Form} />
+      <Route exact path="/pictures" component={PictureSelector} />
+    </HashRouter>
   );
 }
 

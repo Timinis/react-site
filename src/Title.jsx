@@ -1,10 +1,11 @@
 import React from 'react';
+import { Page } from './Navbar';
 
 export const Title = () => {
   return (
-    <div>
+    <Page>
       <h1>Hello World</h1>
       <h2>My First React Site</h2>
-    </div>
+    </Page>
   );
 };
